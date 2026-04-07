@@ -1,0 +1,116 @@
+/* RESET */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #ffb3ec, #b388ff);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* CONTENEDOR */
+.container {
+    padding: 40px 20px;
+}
+
+/* TITULOS */
+h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+/* TARJETAS */
+.card {
+    background: rgba(255,255,255,0.15);
+    padding: 25px;
+    border-radius: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* BOTONES */
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #ff4da6, #ff1a8c);
+    color: white;
+    text-decoration: none;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* INPUTS */
+input {
+    width: 90%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+/* CONTADOR */
+#countdown {
+    font-size: 24px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* MAPA */
+iframe {
+    width: 100%;
+    height: 250px;
+    border-radius: 15px;
+    border: none;
+    margin-top: 10px;
+}
+
+/* DECORACIONES */
+.flower {
+    position: absolute;
+    font-size: 22px;
+    opacity: 0.7;
+    animation: float 8s infinite ease-in-out;
+}
+
+.f1 { top: 10%; left: 5%; }
+.f2 { top: 25%; right: 10%; }
+.f3 { bottom: 20%; left: 15%; }
+
+/* MARIPOSAS */
+.butterfly {
+    position: absolute;
+    font-size: 24px;
+    animation: float 6s infinite ease-in-out;
+}
+
+.b1 { top: 5%; right: 20%; }
+.b2 { bottom: 10%; right: 5%; }
+
+/* ANIMACION */
+@keyframes float {
+    0% { transform: translateY(0);}
+    50% { transform: translateY(-25px);}
+    100% { transform: translateY(0);}
+}
+
+/* MENSAJE */
+#mensaje {
+    margin-top: 10px;
+    font-weight: bold;
+}

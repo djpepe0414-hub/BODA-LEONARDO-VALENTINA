@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invitación de Boda</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #ffb3ec, #b388ff);
+    color: white;
+}
+
+/* DECORACIÓN */
+.flower {
+    position: absolute;
+    font-size: 20px;
+    opacity: 0.7;
+    animation: float 8s infinite ease-in-out;
+}
+
+.f1 { top: 10%; left: 5%; }
+.f2 { top: 30%; right: 10%; }
+.f3 { bottom: 20%; left: 15%; }
+
+@keyframes float {
+    0% { transform: translateY(0);}
+    50% { transform: translateY(-25px);}
+    100% { transform: translateY(0);}
+}
+
+/* CONTENEDOR */
+.container {
+    padding: 40px 20px;
+}
+
+/* TARJETAS */
+.card {
+    background: rgba(255,255,255,0.15);
+    padding: 25px;
+    border-radius: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+    backdrop-filter: blur(10px);
+}
+
+/* BOTONES */
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 30px;
+    background: #ff4da6;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* INPUT */
+input {
+    width: 90%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+/* CONTADOR */
+#countdown {
+    font-size: 22px;
+}
+
+/* MAPA */
+iframe {
+    width: 100%;
+    height: 250px;
+    border-radius: 15px;
+    border: none;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- FLORES -->
+<div class="flower f1">🌸</div>
+<div class="flower f2">🌷</div>
+<div class="flower f3">🌺</div>
+
+<div class="container">
+
+<h1>💍 ¡Nos Casamos! 💍</h1>
+<h2>María & Juan</h2>
+
+<div class="card">
+<p>Te invitamos a celebrar nuestro matrimonio</p>
+</div>
+
+<div class="card">
+<h3>📅 20 de Diciembre 2026</h3>
+<div id="countdown"></div>
+</div>
+
+<div class="card">
+<h3>📍 Ubicación</h3>
+
+<iframe src="https://www.google.com/maps?q=Santander,Colombia&output=embed"></iframe>
+
+<a href="https://www.google.com/maps?q=Santander,Colombia" target="_blank" class="btn">
+Ver ubicación
+</a>
+</div>
+
+<div class="card">
+<h3>✅ Confirmar asistencia</h3>
+
+<input type="text" id="nombre" placeholder="Tu nombre">
+<input type="number" id="personas" placeholder="Número de personas">
+
+<br>
+
+<button class="btn" onclick="confirmar()">Confirmar</button>
+
+<p id="mensaje"></p>
+</div>
+
+</div>
+
+<!-- MUSICA -->
+<audio autoplay loop>
+<source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
+</audio>
+
+<script>
+// CONTADOR
+const eventDate = new Date("Dec 20, 2026 18:00:00").getTime();
+
+setInterval(() => {
+    const now = new Date().getTime();
+    const d = eventDate - now;
+
+    const days = Math.floor(d / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((d % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((d % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((d % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML =
+        `${days} días ${hours}h ${minutes}m ${seconds}s`;
+}, 1000);
+
+
+// CONFIRMACION (LOCAL)
+function confirmar() {
+    let nombre = document.getElementById("nombre").value;
+    let personas = document.getElementById("personas").value;
+
+    if(nombre === "" || personas === "") {
+        document.getElementById("mensaje").innerText = "Completa los datos";
+        return;
+    }
+
+    let data = {
+        nombre: nombre,
+        personas: personas
+    };
+
+    localStorage.setItem("invitado", JSON.stringify(data));
+
+    document.getElementById("mensaje").innerText = "¡Confirmación enviada!";
+}
+</script>
+
+</body>
+</html>
