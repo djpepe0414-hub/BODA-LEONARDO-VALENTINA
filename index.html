@@ -83,6 +83,123 @@
     </div>
 </section>
 
+<!-- ============ ESCENA 1: EL ESCENARIO ============ -->
+<section class="story-scene scene-stage reveal">
+    <div class="scene-visual" aria-hidden="true">
+        <div class="parallax-layer" data-speed="0.06">
+            <svg class="scene-svg" viewBox="0 0 500 320" preserveAspectRatio="xMidYMax meet">
+                <defs>
+                    <linearGradient id="beamV1" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="var(--violet)" stop-opacity="0.45"/>
+                        <stop offset="100%" stop-color="var(--violet)" stop-opacity="0"/>
+                    </linearGradient>
+                    <linearGradient id="beamC1" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="var(--cyan)" stop-opacity="0.4"/>
+                        <stop offset="100%" stop-color="var(--cyan)" stop-opacity="0"/>
+                    </linearGradient>
+                </defs>
+                <polygon points="120,0 165,0 235,320 150,320" fill="url(#beamV1)"/>
+                <polygon points="330,0 375,0 345,320 260,320" fill="url(#beamC1)"/>
+            </svg>
+        </div>
+
+        <div class="parallax-layer" data-speed="0">
+            <svg class="scene-svg" viewBox="0 0 500 320" preserveAspectRatio="xMidYMax meet">
+                <!-- truss -->
+                <rect x="60" y="26" width="380" height="7" class="stroke-cyan fill-none" rx="3"/>
+                <line x1="90" y1="33" x2="90" y2="55" class="stroke-cyan"/>
+                <line x1="250" y1="33" x2="250" y2="55" class="stroke-cyan"/>
+                <line x1="410" y1="33" x2="410" y2="55" class="stroke-cyan"/>
+                <!-- spotlights -->
+                <polygon points="90,55 60,150 120,150" class="fill-violet-soft"/>
+                <polygon points="250,55 200,170 300,170" class="fill-cyan-soft"/>
+                <polygon points="410,55 380,150 440,150" class="fill-violet-soft"/>
+                <!-- speaker stacks -->
+                <rect x="35" y="150" width="55" height="140" rx="6" class="fill-panel stroke-violet"/>
+                <rect x="410" y="150" width="55" height="140" rx="6" class="fill-panel stroke-violet"/>
+                <circle cx="62.5" cy="185" r="14" class="stroke-cyan fill-none"/>
+                <circle cx="62.5" cy="225" r="10" class="stroke-cyan fill-none"/>
+                <circle cx="437.5" cy="185" r="14" class="stroke-cyan fill-none"/>
+                <circle cx="437.5" cy="225" r="10" class="stroke-cyan fill-none"/>
+                <!-- platform -->
+                <polygon points="70,290 430,290 470,320 30,320" class="fill-panel stroke-cyan"/>
+                <!-- fog -->
+                <ellipse cx="250" cy="312" rx="220" ry="16" class="fog-glow"/>
+            </svg>
+        </div>
+    </div>
+    <div class="scene-caption">
+        <p class="eyebrow">Escena 01</p>
+        <h3>El escenario está listo</h3>
+    </div>
+</section>
+
+<!-- ============ ESCENA 2: EL DJ ============ -->
+<section class="story-scene scene-dj reveal">
+    <div class="scene-visual" aria-hidden="true">
+        <div class="parallax-layer" data-speed="0.1">
+            <svg class="scene-svg" viewBox="0 0 500 320" preserveAspectRatio="xMidYMax meet">
+                <ellipse cx="250" cy="150" rx="180" ry="150" class="glow-halo"/>
+            </svg>
+        </div>
+
+        <div class="parallax-layer" data-speed="0">
+            <svg class="scene-svg" viewBox="0 0 500 320" preserveAspectRatio="xMidYMax meet">
+                <!-- booth -->
+                <rect x="140" y="230" width="220" height="60" rx="10" class="fill-panel stroke-violet"/>
+                <circle cx="195" cy="240" r="26" class="stroke-cyan fill-none"/>
+                <circle cx="195" cy="240" r="10" class="stroke-cyan fill-none"/>
+                <circle cx="305" cy="240" r="26" class="stroke-cyan fill-none"/>
+                <circle cx="305" cy="240" r="10" class="stroke-cyan fill-none"/>
+                <rect x="235" y="222" width="30" height="36" rx="4" class="fill-none stroke-cyan"/>
+                <line x1="245" y1="228" x2="245" y2="252" class="stroke-cyan"/>
+                <line x1="255" y1="228" x2="255" y2="252" class="stroke-cyan"/>
+                <!-- dj silhouette -->
+                <circle cx="250" cy="120" r="34" class="fill-silhouette"/>
+                <path d="M222,108 a28,20 0 0 1 56,0" class="fill-none stroke-violet headphone"/>
+                <path d="M250,150 L250,205 M250,160 L200,130 M250,160 L308,95" class="stroke-body"/>
+                <path d="M205,220 L225,160 L275,160 L300,220 Z" class="fill-silhouette"/>
+            </svg>
+        </div>
+    </div>
+    <div class="scene-caption">
+        <p class="eyebrow">Escena 02</p>
+        <h3>El maestro de ceremonias</h3>
+    </div>
+</section>
+
+<!-- ============ ESCENA 3: EL PÚBLICO ============ -->
+<section class="story-scene scene-crowd reveal">
+    <div class="scene-visual" aria-hidden="true">
+        <div class="parallax-layer" data-speed="0.08">
+            <svg class="scene-svg" viewBox="0 0 500 320" preserveAspectRatio="xMidYMax meet">
+                <polygon points="0,0 500,0 500,60 0,60" class="fill-wash"/>
+            </svg>
+        </div>
+
+        <div class="parallax-layer" data-speed="0">
+            <svg class="scene-svg" viewBox="0 0 500 320" preserveAspectRatio="xMidYMax meet">
+                <g class="crowd-row">
+                    <path d="M40,320 L40,270 a18,18 0 0 1 36,0 L76,320 Z" class="fill-silhouette"/>
+                    <path d="M60,270 L45,235 M60,270 L92,220" class="stroke-body"/>
+                    <path d="M110,320 L110,265 a18,18 0 0 1 36,0 L146,320 Z" class="fill-silhouette"/>
+                    <path d="M180,320 L180,268 a18,18 0 0 1 36,0 L216,320 Z" class="fill-silhouette"/>
+                    <path d="M198,268 L182,228 M198,268 L232,225" class="stroke-body"/>
+                    <path d="M250,320 L250,262 a18,18 0 0 1 36,0 L286,320 Z" class="fill-silhouette"/>
+                    <path d="M320,320 L320,266 a18,18 0 0 1 36,0 L356,320 Z" class="fill-silhouette"/>
+                    <path d="M338,266 L322,222 M338,266 L372,235" class="stroke-body"/>
+                    <path d="M390,320 L390,270 a18,18 0 0 1 36,0 L426,320 Z" class="fill-silhouette"/>
+                    <path d="M460,320 L460,268 a18,18 0 0 1 32,0 L492,320 Z" class="fill-silhouette"/>
+                </g>
+            </svg>
+        </div>
+    </div>
+    <div class="scene-caption">
+        <p class="eyebrow">Escena 03</p>
+        <h3>La pista enloquece</h3>
+    </div>
+</section>
+
 <!-- ============ BONOS ============ -->
 <section class="bonus-section">
     <div class="container">
@@ -210,8 +327,9 @@
     actualizarContador();
     setInterval(actualizarContador, 1000);
 
-    // ---------- Revelar secciones al hacer scroll ----------
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // ---------- Revelar secciones al hacer scroll ----------
     const revealEls = document.querySelectorAll('.reveal');
 
     if (prefersReducedMotion) {
@@ -246,6 +364,33 @@
                 card.style.transform = 'perspective(700px) rotateX(0) rotateY(0) translateY(0)';
             });
         });
+    }
+
+    // ---------- Parallax de las escenas (escenario / DJ / público) ----------
+    if (!prefersReducedMotion) {
+        const parallaxLayers = document.querySelectorAll('.parallax-layer');
+        let ticking = false;
+
+        function updateParallax() {
+            const viewportCenter = window.innerHeight / 2;
+            parallaxLayers.forEach(layer => {
+                const speed = parseFloat(layer.dataset.speed || '0');
+                const rect = layer.getBoundingClientRect();
+                const elementCenter = rect.top + rect.height / 2;
+                const distance = viewportCenter - elementCenter;
+                layer.style.transform = `translateY(${distance * speed}px)`;
+            });
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(updateParallax);
+                ticking = true;
+            }
+        }, { passive: true });
+
+        updateParallax();
     }
 </script>
 
